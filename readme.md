@@ -133,9 +133,34 @@ These scripts complete the end-to-end pipeline from raw data → feature enginee
 
 ## Data Visualization (Tableau Dashboards)
 
-I built interactive Tableau dashboards using traffic, toll transaction, and violation data from **2013–2025** to answer four project questions. Each dashboard is labeled **Q1–Q4** and includes filters for year, facility, and vehicle type.
+### Tableau Public Dashboard
+I built fully interactive dashboards in Tableau to answer the four core project questions (Q1–Q4) related to traffic usage, toll violations, congestion patterns, and pricing impact across Port Authority bridges and tunnels.
 
+The dashboards allow users to filter by year, facility, vehicle type, and other dimensions, and explore trends without additional data preparation.
 
+🔗 **View the interactive Tableau dashboard on Tableau Public:**  
+https://public.tableau.com/views/PortAuthorityofNYNJ/Q1-TopFactorsAffectingBridgeTunnelUsage?:language=en-GB&:display_count=n&:origin=viz_share_link
+
+---
+
+### Medium Articles – End-to-End Project Explanation
+I documented the full project journey in a four-part Medium series, explaining the analysis, modeling, deployment approach, and final insights step by step. These articles provide detailed context behind the datasets, feature engineering, models, and dashboards included in this repository.
+
+**Part 1 – Data Exploration & Problem Framing**  
+https://medium.com/@ssrivastava09/exploring-traffic-data-for-the-port-authority-of-ny-nj-part-1-70089db7c56c
+
+**Part 2 – Building the Models**  
+https://medium.com/@ssrivastava09/exploring-traffic-data-for-the-port-authority-of-ny-nj-part-2-building-the-models-7787d6bf2b1f
+
+**Part 3 – The Deployment Journey**  
+https://medium.com/@ssrivastava09/exploring-traffic-data-for-the-port-authority-of-ny-nj-part-3-the-deployment-journey-c6e571e9fe1e
+
+**Part 4 – From Analysis to Final Insights**  
+https://medium.com/@ssrivastava09/exploring-traffic-data-for-the-port-authority-of-ny-nj-part-4-final-part-from-analysis-to-8cc62e4c641a
+
+Together, the Tableau dashboards and Medium articles provide both an interactive and narrative view of the project—from raw data and feature engineering to modeling, deployment, and actionable recommendations.
+
+---
 
 **Q1 – Factors Affecting Usage**  
 Analyzes traffic volume by facility, weekday vs weekend, holiday vs non-holiday, vehicle mix, and toll payment method. Results show that weekday, non-holiday auto traffic drives most usage, with GWB Upper and Lower carrying the highest volumes.

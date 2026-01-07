@@ -62,7 +62,72 @@ This notebook prepares raw traffic data for classification, clustering, AutoML, 
 - Fully engineered daily traffic dataset  
 - Balanced classification dataset for AutoML  
 - Facility-level clustered dataset with semantic traffic labels  
-- Power BI–ready daily, weekly, and monthly aggregates  
+- Power BI–ready daily, weekly, and monthly aggregates
+
+---
+
+## Modeling & AutoML Replication Scripts
+
+In addition to AutoML workflows, I designed standalone Python notebooks that replicate the final selected AutoML models. These scripts allow stakeholders to reproduce predictions even when AutoML tools are unavailable, ensuring transparency, portability, and long-term usability.
+
+### 4. `04_Model_TimeSeries.ipynb`
+
+This notebook replicates the AutoML **time-series forecasting** model used to predict future traffic volumes.
+
+**Key Capabilities**
+- Trains time-series models on engineered daily and monthly traffic features  
+- Incorporates seasonality, trends, and lagged features  
+- Produces forward-looking traffic volume forecasts by facility  
+- Designed to mirror AutoML-selected features and evaluation logic  
+
+**Use Case**
+- Forecast future congestion patterns  
+- Support planning, staffing, and seasonal capacity decisions without AutoML dependency  
+
+---
+
+### 5. `05_Model_TollViolation.ipynb`
+
+This notebook reproduces the **toll violation classification** model originally selected via AutoML.
+
+**Key Capabilities**
+- Trains supervised classification models on the balanced violation dataset  
+- Uses the same feature set generated during feature engineering  
+- Handles class imbalance explicitly to avoid majority-class bias  
+- Outputs violation probability scores and class predictions  
+
+**Use Case**
+- Predict likelihood of toll violations by facility and time  
+- Support enforcement planning and compliance strategies  
+- Serve as a drop-in replacement for AutoML-based classifiers  
+
+---
+
+### 6. `06_Model_TrafficCluster.ipynb`
+
+This notebook replicates the **traffic volume category prediction** model based on facility-level clustering.
+
+**Key Capabilities**
+- Trains classification models to predict **High / Medium / Low** traffic volume levels  
+- Uses clustered labels generated during facility-level aggregation  
+- Enables prediction of traffic intensity instead of raw counts  
+- Aligns with AutoML-selected clustering and classification logic  
+
+**Use Case**
+- Classify future days into traffic intensity levels  
+- Support operational decision-making and congestion alerts  
+- Maintain consistency with AutoML clustering outputs without platform reliance  
+
+---
+
+### Why These Scripts Matter
+
+Together, these three notebooks ensure that:
+- All final AutoML results are **fully reproducible** in pure Python  
+- Stakeholders can run, audit, and extend models without vendor lock-in  
+- The project remains deployable in environments where AutoML tools are unavailable  
+
+These scripts complete the end-to-end pipeline from raw data → feature engineering → modeling → prediction → visualization.
 
 ---
 

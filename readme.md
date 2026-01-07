@@ -70,10 +70,14 @@ This notebook prepares raw traffic data for classification, clustering, AutoML, 
 
 I built interactive Tableau dashboards using traffic, toll transaction, and violation data from **2013–2025** to answer four project questions. Each dashboard is labeled **Q1–Q4** and includes filters for year, facility, and vehicle type.
 
+
+
 **Q1 – Factors Affecting Usage**  
 Analyzes traffic volume by facility, weekday vs weekend, holiday vs non-holiday, vehicle mix, and toll payment method. Results show that weekday, non-holiday auto traffic drives most usage, with GWB Upper and Lower carrying the highest volumes.
 
 <img width="1319" height="828" alt="Q1 - Top Factors Affecting Bridge   Tunnel Usage" src="https://github.com/user-attachments/assets/1ffa8a1f-2f1a-449d-951d-a60cafd788e0" />
+
+
 
 
 **Q2 – Toll Violations by Time and Facility**  
@@ -82,10 +86,14 @@ Explores violation patterns by facility and season, showing strong concentration
 <img width="1282" height="831" alt="Q2 - Toll Violations by Facility and Month" src="https://github.com/user-attachments/assets/ae659322-025c-4fcd-90ec-72d413b8d00e" />
 
 
+
+
 **Q3 – Busiest Times and Traffic Drivers**  
 Identifies peak congestion periods using daily, weekly, and monthly views. The analysis shows congestion is highest during summer weekends, especially Saturdays, and is primarily driven by passenger cars.
 
 <img width="1286" height="826" alt="Q3 – Busiest Times and Traffic Drivers" src="https://github.com/user-attachments/assets/1ca6a8de-50e8-440f-9acf-ce010680ac89" />
+
+
 
 
 **Q4 – Impact of Pricing on Congestion**  
@@ -96,7 +104,7 @@ Compares 2025 traffic with prior years and shows stable facility shares and volu
 
 ---
 
-## 📁 Data Files
+## Data Files
 
 ### `Traffic_PowerBI_Ready_Daily.csv`
 **Description:**  
@@ -104,15 +112,6 @@ Daily-level traffic dataset for operational analysis and visualization.
 
 **Key Fields:**  
 `DATE, FAC, LANE, FAC_B, Is_Holiday, Is_Weekend, Day_Name`
-
----
-
-### `Traffic_PowerBI_Ready_Weekly.csv`
-**Description:**  
-Weekly aggregated dataset optimized for trend analysis in Power BI.
-
-**Grouped By:**  
-`Year, Week_of_Year, FAC, LANE, FAC_B`
 
 ---
 

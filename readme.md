@@ -200,9 +200,7 @@ All three selected models were deployed after evaluation using **Azure AutoML**.
 **Deployment Approach**
 
 • Models were trained and finalized using Azure AutoML instances
-
 • Deployment executed via Azure AutoML Python Notebook (Virtual Environment)
-
 • This approach allowed custom preprocessing, version control, and reproducibility
 
 **API Exposure**
@@ -211,7 +209,6 @@ Once deployed, the models were exposed as REST APIs using **ngrok**, which secur
 After the API was exposed:
 
 • External clients could send JSON-based HTTP requests
-
 • The API returned real-time predictions in JSON format
 
 This setup ensures that even in the absence of AutoML infrastructure, stakeholders can replicate predictions using the provided Python scripts.
@@ -223,6 +220,7 @@ Below is an example **Postman JSON request** used for predicting monthly traffic
 **Sample Request (Postman – Predict Monthly Traffic Volume)**
 
 <img width="480" height="416" alt="image" src="https://github.com/user-attachments/assets/b4c551d1-9618-4b0d-8238-5c007cf1a610" />
+
 
 
 **Sample Response**

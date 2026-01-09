@@ -195,7 +195,7 @@ Compares 2025 traffic with prior years and shows stable facility shares and volu
 ---
 
 ## Model Deployment & API Inference ##
-All three selected models were deployed after evaluation using **Azure AutoML**, as traditional modeling approaches did not meet the required performance benchmarks. The deployment was carried out using an **Azure AutoML Python Notebook running inside a virtual environment**, which provided greater flexibility and control compared to Azure App Services. 
+All three selected models were deployed after evaluation using **Azure AutoML**. The deployment was carried out using an **Azure AutoML Python Notebook running inside a virtual environment**, which provided greater flexibility and control compared to Azure App Services. 
 
 **Deployment Approach**
 
@@ -206,6 +206,7 @@ All three selected models were deployed after evaluation using **Azure AutoML**,
 • This approach allowed custom preprocessing, version control, and reproducibility
 
 **API Exposure**
+
 Once deployed, the models were exposed as REST APIs using **ngrok**, which securely exposed the local service to external users through a public URL.
 After the API was exposed:
 

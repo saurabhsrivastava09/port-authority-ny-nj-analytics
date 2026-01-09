@@ -198,18 +198,16 @@ Compares 2025 traffic with prior years and shows stable facility shares and volu
 All three selected models were deployed after evaluation using **Azure AutoML**. The deployment was carried out using an **Azure AutoML Python Notebook running inside a virtual environment**, which provided greater flexibility and control compared to Azure App Services. 
 
 **Deployment Approach**
-
-• Models were trained and finalized using Azure AutoML instances
-• Deployment executed via Azure AutoML Python Notebook (Virtual Environment)
-• This approach allowed custom preprocessing, version control, and reproducibility
+- Models were trained and finalized using Azure AutoML instances
+- Deployment executed via Azure AutoML Python Notebook (Virtual Environment)
+- This approach allowed custom preprocessing, version control, and reproducibility
 
 **API Exposure**
 
 Once deployed, the models were exposed as REST APIs using **ngrok**, which securely exposed the local service to external users through a public URL.
 After the API was exposed:
-
-• External clients could send JSON-based HTTP requests
-• The API returned real-time predictions in JSON format
+- External clients could send JSON-based HTTP requests
+- The API returned real-time predictions in JSON format
 
 This setup ensures that even in the absence of AutoML infrastructure, stakeholders can replicate predictions using the provided Python scripts.
 

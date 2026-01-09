@@ -194,6 +194,34 @@ Compares 2025 traffic with prior years and shows stable facility shares and volu
 
 ---
 
+##Model Deployment & API Inference##
+All three selected models were deployed after evaluation using **Azure AutoML**, as traditional modeling approaches did not meet the required performance benchmarks. The deployment was carried out using an **Azure AutoML Python Notebook running inside a virtual environment**, which provided greater flexibility and control compared to Azure App Services. 
+
+**Deployment Approach**
+• Models were trained and finalized using Azure AutoML instances
+• Deployment executed via Azure AutoML Python Notebook (Virtual Environment)
+• This approach allowed custom preprocessing, version control, and reproducibility
+
+**API Exposure**
+Once deployed, the models were exposed as REST APIs using **ngrok**, which securely exposed the local service to external users through a public URL.
+After the API was exposed:
+• External clients could send JSON-based HTTP requests
+• The API returned real-time predictions in JSON format
+This setup ensures that even in the absence of AutoML infrastructure, stakeholders can replicate predictions using the provided Python scripts.
+
+**API Request & Response Example**
+
+Below is an example **Postman JSON request** used for predicting monthly traffic volume, followed by the corresponding API response.
+
+**Sample Request (Postman – Predict Monthly Traffic Volume)**
+<img width="480" height="416" alt="image" src="https://github.com/user-attachments/assets/b4c551d1-9618-4b0d-8238-5c007cf1a610" />
+
+
+**Sample Response**
+<img width="480" height="415" alt="image" src="https://github.com/user-attachments/assets/0827d0d0-1ffc-4dd6-8dcf-7e7e8f4326a1" />
+
+---
+
 ## Data Files
 
 ### `Traffic_PowerBI_Ready_Daily.csv`
